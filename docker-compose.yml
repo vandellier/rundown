@@ -1,0 +1,14 @@
+services:
+  rundown:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATA_DIR: /data
+      ACCESS_CODE: ${ACCESS_CODE:-}
+    volumes:
+      - rundown-data:/data
+    restart: unless-stopped
+
+volumes:
+  rundown-data:

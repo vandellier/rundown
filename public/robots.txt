@@ -1,0 +1,9 @@
+# Personal news reader. Do not crawl the API.
+User-agent: *
+Disallow: /api/
+Disallow: /settings
+Disallow: /unlock
+
+User-agent: *
+Allow: /about
+Allow: /terms
